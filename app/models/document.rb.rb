@@ -5,14 +5,14 @@ class Document < ActiveRecord::Base
     plain_text_attribute :title
 
     def title
-        super.percense || 'Untitled'
+        super.presence || 'Untitled'
     end
 
     def auto_position?
         true
     end
 
-    def subscriable?
+    def subscribable?
         true
     end
 
